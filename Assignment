@@ -1,1 +1,30 @@
+package Assignment1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginFunctionality {
+	
+public static void main(String[] args) {
+		
+		
+		System.setProperty("webdriver.chrome.driver","D:\\AutomationTesting\\Browsers\\chromedriver.exe");
+		//System.setProperty("webdriver.edge.driver","D:\\AutomationTesting\\Browsers\\msedgedriver.exe");
+		
+		ChromeDriver driver = new ChromeDriver();
+		//EdgeDriver driver = new EdgeDriver();
+		
+		driver.get(" https://sakshingp.github.io/assignment/login.html\r\n"
+				+ "");
+		driver.manage().window().maximize();
+		driver.findElement(By.id("username")).sendKeys("nikitakalbande241997@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("nikita@123");
+		driver.findElement(By.className("auth-wrapper")).click();
+		driver.findElement(By.id("log-in")).click();
+		
+		driver.findElement(By.className("text-right")).click();
+		
+	}
+}
+
 
